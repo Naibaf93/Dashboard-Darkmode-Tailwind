@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -9,6 +9,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/output.css">
+
+  <script>
+    const storageThemeValue = localStorage.getItem('theme');
+    const systemColorScheme = window.matchMedia(('(prefers-color-scheme: dark)')).matches ?
+    'dark' : 'light';
+
+    const newThemePage = storageThemeValue ?? systemColorScheme;
+
+    document.documentElement.setAttribute('data-theme', newThemePage );
+  </script>
 </head>
 <body class="font-inter bg-white before:absolute before:inset-x-0 before:0
 before:h-96 before:bg-very-pale-blue before:-z-10 text-very-dark-blue

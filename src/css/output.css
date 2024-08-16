@@ -646,20 +646,8 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-.grid-cols-\[min-content_max-content\] {
-  grid-template-columns: min-content max-content;
-}
-
-.grid-rows-\[max-content_max-content\] {
-  grid-template-rows: max-content max-content;
-}
-
 .flex-row-reverse {
   flex-direction: row-reverse;
-}
-
-.content-center {
-  align-content: center;
 }
 
 .items-center {
@@ -684,10 +672,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .gap-6 {
   gap: 1.5rem;
-}
-
-.gap-y-12 {
-  row-gap: 3rem;
 }
 
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
@@ -798,13 +782,13 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 2.5rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
+.text-lg {
+  font-size: 1.125rem;
   line-height: 1.75rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
+.text-xl {
+  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
@@ -932,6 +916,32 @@ h1, h2, h3, h4, h5, h6 {
   --transform-circle: -100%;
 }
 
+.dark\:bg-dark-desaturated-blue:is([data-theme="dark"] *) {
+  --tw-bg-opacity: 1;
+  background-color: hsl(228 28% 20% / var(--tw-bg-opacity));
+}
+
+.dark\:bg-very-dark-blue:is([data-theme="dark"] *) {
+  --tw-bg-opacity: 1;
+  background-color: hsl(230 17% 14% / var(--tw-bg-opacity));
+}
+
+.dark\:text-desaturated-blue:is([data-theme="dark"] *) {
+  --tw-text-opacity: 1;
+  color: hsl(228 34% 66% / var(--tw-text-opacity));
+}
+
+.dark\:text-white:is([data-theme="dark"] *) {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.dark\:before\:bg-very-dark-blue-top:is([data-theme="dark"] *)::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: hsl(232 19% 15% / var(--tw-bg-opacity));
+}
+
 @media (min-width: 768px) {
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -955,33 +965,5 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 1024px) {
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .dark\:bg-dark-desaturated-blue {
-    --tw-bg-opacity: 1;
-    background-color: hsl(228 28% 20% / var(--tw-bg-opacity));
-  }
-
-  .dark\:bg-very-dark-blue {
-    --tw-bg-opacity: 1;
-    background-color: hsl(230 17% 14% / var(--tw-bg-opacity));
-  }
-
-  .dark\:text-desaturated-blue {
-    --tw-text-opacity: 1;
-    color: hsl(228 34% 66% / var(--tw-text-opacity));
-  }
-
-  .dark\:text-white {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
-  }
-
-  .dark\:before\:bg-very-dark-blue-top::before {
-    content: var(--tw-content);
-    --tw-bg-opacity: 1;
-    background-color: hsl(232 19% 15% / var(--tw-bg-opacity));
   }
 }
